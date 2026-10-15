@@ -1,0 +1,18 @@
+# ICU Alarm Event Log reference set: MIMIC_III_CLINICAL_EVENTS
+# source: MIMIC-III Clinical Database Demo v1.4 (PhysioNet), INPUTEVENTS_MV: administration of vasopressors and inotropes
+# source_url: https://physionet.org/content/mimiciii-demo/1.4/
+# citation: Johnson AEW, Pollard TJ, Mark RG. MIMIC-III Clinical Database Demo (version 1.4). PhysioNet (2019). https://doi.org/10.13026/C2HM2Q
+# license: Open Data Commons Open Database License v1.0 (ODbL)
+# columns: offset_s = seconds from the start of the selected segment of the record (manifest.csv), the same time axis as the numerics
+record,offset_s,category,code,value_num,value_unit
+p042075-2166-02-12-18-07n,824,VASOPRESSOR,DOPAMINE,5.002,MCG_KG_MIN
+p042075-2166-02-12-18-07n,6764,VASOPRESSOR,DOPAMINE,7.001,MCG_KG_MIN
+p042075-2166-02-12-18-07n,13844,VASOPRESSOR,DOPAMINE,8.999,MCG_KG_MIN
+p042075-2166-02-12-18-07n,21224,VASOPRESSOR,DOPAMINE,10.008,MCG_KG_MIN
+p042075-2166-02-12-18-07n,27944,VASOPRESSOR,DOPAMINE,12.01,MCG_KG_MIN
+p042075-2166-02-12-18-07n,28364,VASOPRESSOR,DOBUTAMINE,5.003,MCG_KG_MIN
+p042075-2166-02-12-18-07n,34364,VASOPRESSOR,DOBUTAMINE,5.088,MCG_KG_MIN
+p042075-2166-02-12-18-07n,34664,VASOPRESSOR,DOPAMINE,7.995,MCG_KG_MIN
+p042075-2166-02-12-18-07n,51764,VASOPRESSOR,DOPAMINE,7.016,MCG_KG_MIN
+p042075-2166-02-12-18-07n,56024,VASOPRESSOR,DOPAMINE,7.023,MCG_KG_MIN
+p042075-2166-02-12-18-07n,75164,VASOPRESSOR,DOPAMINE,6.02,MCG_KG_MIN

@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below, and cite the MIMIC-III and PhysioNet sources listed in DATA_CARD.md."
+type: dataset
+title: "ICU Alarm Event Log: MIMIC-III reference set"
+version: 0.0.1
+date-released: 2026-10-15
+authors:
+  - name: "tokenova s.r.o."
+    city: Prague
+    country: CZ
+    website: "https://www.tokenova.eu"
+repository-code: "https://github.com/tokenova-eu/icu-alarm-event-log"
+license:
+  - ODbL-1.0
+  - Apache-2.0
+  - CC-BY-4.0
+keywords:
+  - intensive care
+  - alarm fatigue
+  - patient monitoring
+  - MIMIC-III
+  - benchmark
+references:
+  - type: dataset
+    title: "MIMIC-III Waveform Database Matched Subset"
+    version: "1.0"
+    doi: 10.13026/c2294b
+    authors:
+      - family-names: Moody
+        given-names: Benjamin
+      - family-names: Moody
+        given-names: George
+      - family-names: Villarroel
+        given-names: Mauricio
+      - family-names: Clifford
+        given-names: Gari D.
+      - family-names: Silva
+        given-names: Ikaro
+    publisher:
+      name: PhysioNet
+    year: 2020
+  - type: dataset
+    title: "MIMIC-III Clinical Database Demo"
+    version: "1.4"
+    doi: 10.13026/C2HM2Q
+    authors:
+      - family-names: Johnson
+        given-names: Alistair E. W.
+      - family-names: Pollard
+        given-names: Tom J.
+      - family-names: Mark
+        given-names: Roger G.
+    publisher:
+      name: PhysioNet
+    year: 2019

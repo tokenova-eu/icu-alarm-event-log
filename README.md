@@ -3,9 +3,10 @@
 Open tools and a data standard for building, checking, annotating and evaluating
 datasets of intensive care unit (ICU) monitor alarms.
 
-> **Status: pre-release.** This repository is being set up. The first release, v0.1,
-> is planned within three months of the project start. Nothing here is a medical
-> device, and nothing here has been clinically validated.
+> **Status: release v0.0.1 (15 October 2026), the MIMIC-III reference set.** 31 ICU stays
+> at 1 Hz with derived alarm-limit context, a data card and checksums. The data standard
+> with its validator (v0.1) is planned within three months of the project start. Nothing
+> here is a medical device, and nothing here has been clinically validated.
 
 ## Why this exists
 
@@ -31,7 +32,19 @@ together. This repository provides the open building blocks for such a dataset.
 | ETL for monitor exports | Converts exports from ICU monitoring systems into the standard. |
 | Annotation tool and protocol | Lets clinical staff mark alarms and interventions on a timeline, with a written protocol for consistent annotation. |
 | Benchmark with pre-specified metrics | Evaluates any alarm system from a simple CSV file of alarm times, so different approaches can be compared on equal terms. |
-| Reference set derived from MIMIC-III | ICU stays from the public MIMIC-III Waveform Database Matched Subset at 1 Hz, built reproducibly with checksums, so the tools can be tried without access to hospital data. |
+| Reference set derived from MIMIC-III (**available now**, `data/`, see `DATA_CARD.md`) | 31 ICU stays from the open-access MIMIC-III Waveform Database Matched Subset at 1 Hz, with checksums, so the tools can be tried without access to hospital data. The scripts that build it follow with v0.1. |
+
+## Quick start
+
+```python
+import pandas as pd
+
+vitals = pd.read_csv("data/mimic3wdb_matched_1hz_sys.csv.gz", comment="#")
+limits = pd.read_csv("data/mimic3_philips_default_limits.csv", comment="#")
+print(vitals.groupby("record").size().describe())
+```
+
+Check the files with `sha256sum -c SHA256SUMS.txt` inside `data/`.
 
 ## What will never be published here
 
@@ -51,7 +64,7 @@ together. This repository provides the open building blocks for such a dataset.
 | Data derived from MIMIC-III | Open Database License (ODbL) 1.0, following the licence of the source data |
 
 Anyone using the reference set must also cite the original MIMIC-III and PhysioNet
-publications.
+publications (see `DATA_CARD.md` and `CITATION.cff`).
 
 ## Contributing
 
